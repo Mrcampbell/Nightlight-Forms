@@ -9,11 +9,11 @@ namespace Nightlight.Services
 {
     public static class AttributeUtils
     {
-        public static IEnumerable<IAttribute> ReadAttributes<T>(T obj)
+        public static IEnumerable<INightlightAttribute> ReadAttributes<T>(T obj)
         {
             //TODO: loosen this up so we can use an array rather than use processing power, etc
             List<PropertyInfo> properties = typeof(T).GetProperties().ToList();
-            List<IAttribute> attributes = new List<IAttribute>();
+            List<INightlightAttribute> attributes = new List<INightlightAttribute>();
 
             foreach (var property in properties)
             {

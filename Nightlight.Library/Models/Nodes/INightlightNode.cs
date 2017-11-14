@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Nightlight.Attributes
+namespace Nightlight.Models.Nodes
 {
-    public interface INightlightAttribute
+    public interface INightlightNode
     {
     }
 }

@@ -5,7 +5,7 @@ using System.Text;
 namespace Nightlight.Attributes
 {
     [AttributeUsage(AttributeTargets.All)]
-    public abstract class NightlightBaseAttribute : Attribute, IAttribute
+    public abstract class NightlightBaseAttribute : Attribute, INightlightAttribute
     {
         private string _title;
 

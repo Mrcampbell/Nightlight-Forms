@@ -1,4 +1,7 @@
-﻿using Nightlight.Services;
+﻿using Nightlight.Models.Form;
+using Nightlight.Models.Nodes;
+using Nightlight.Platform.ConsoleApplication;
+using Nightlight.Services;
 using Nightlight.TestClasses;
 using System;
 using System.Collections.Generic;
@@ -15,10 +18,13 @@ namespace Nightlight.QAConsole
         {
             StringTestClass stc = new StringTestClass
             {
-                Name = "Mike"
             };
 
-            AttributeUtils.ReadAttributes(stc);
+            NightlightFormController<StringTestClass> controller = new NightlightFormController<StringTestClass>(stc);
+
+            NightlightConsoleForm<StringTestClass> consoleForm = new NightlightConsoleForm<StringTestClass>(controller);
+
+            consoleForm.Run();
 
             Console.ReadKey(true);
 

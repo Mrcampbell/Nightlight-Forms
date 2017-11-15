@@ -15,7 +15,5 @@ namespace Nightlight.Attributes
         }
 
         public string Title { get { return _title; } }
-        public abstract bool IsValid();
-        public abstract string GetErrorMessage();
     }
 }

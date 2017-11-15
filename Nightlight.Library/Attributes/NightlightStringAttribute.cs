@@ -1,11 +1,12 @@
-﻿using System;
+﻿using Nightlight.BridgeClasses;
+using System;
 using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
 namespace Nightlight.Attributes
 {
-    public class NightlightStringAttribute : NightlightBaseAttribute
+    public class NightlightStringAttribute : NightlightBaseAttribute, INightlightStringBridge
     {
         private int _minLength;
         private bool _minLengthIsSet;
@@ -28,18 +29,11 @@ namespace Nightlight.Attributes
 
         public int MaxLength { get=> _maxLength; set { _maxLength = value; _maxLengthIsSet = true; } }
         public bool MaxLengthIsSet { get => _maxLengthIsSet; }
-        
+
+        // TODO: This shouldn't be held by the attribute, but not sure currently how/where to store it
+        public string Value { get; set; }
+
         // to be continued...
         //public string RegexPattern { get; set; }
-
-        public override string GetErrorMessage()
-        {
-            return "This works!";
-        }
-
-        public override bool IsValid()
-        {
-            return true;
-        }
     }
 }

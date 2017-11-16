@@ -7,5 +7,6 @@ namespace Nightlight.Models.Nodes
     public interface INightlightNode
     {
         string GetValueString();
+        void ValidateNode();
     }
 }

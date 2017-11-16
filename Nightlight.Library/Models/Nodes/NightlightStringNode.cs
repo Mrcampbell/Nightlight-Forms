@@ -64,8 +64,14 @@ namespace Nightlight.Models.Nodes
             if (_minLength < 0)
                 throw new Exception($"Node: {Title} - Cannot have a Minimum Length Less than Zero.  Minimum Length Provided: {_minLength}");
 
+            if (_maxLength < 0)
+                throw new Exception($"Node: {Title} - Cannot have a Maximum Length Less than Zero.  Maximum Length Provided: {_maxLength}");
+
             if (_minLengthIsSet && !Required)
-                throw new Exception("Node cannot have Required set to False with Minimum Length Greater than Zero");
+                throw new Exception($"Node {Title} - Cannot have Required set to False with Minimum Length Greater than Zero");
+
+            if (_minLengthIsSet && _maxLengthIsSet && _minLength >= _maxLength)
+                throw new Exception($"Node: {Title} - Cannot have Minimum Length Greater Than or Equal to Maximum Length");
         }
 
         

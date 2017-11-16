@@ -15,13 +15,14 @@ namespace Nightlight.Models.Nodes
 
         public NightlightStringNode(string Title) : base (Title)
         {
+            Required = false;
             _minLengthIsSet = false;
             _maxLengthIsSet = false;
         }
 
         public bool Required { get; set; }
 
-        public int MinLength { get => _minLength; set { _minLength = value; _minLengthIsSet = true; } }
+        public int MinLength { get => _minLength; set { _minLength = value; _minLengthIsSet = true; Required = true; } }
         public bool MinLengthIsSet { get => _minLengthIsSet; }
 
         public int MaxLength { get => _maxLength; set { _maxLength = value; _maxLengthIsSet = true; } }

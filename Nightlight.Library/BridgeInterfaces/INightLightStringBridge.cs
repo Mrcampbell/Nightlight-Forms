@@ -17,6 +17,6 @@ namespace Nightlight.BridgeClasses
         string Value { get; set; }
 
         // to be continued...
-        //public string RegexPattern { get; set; }
+        //string RegexPattern { get; set; }
     }
 }

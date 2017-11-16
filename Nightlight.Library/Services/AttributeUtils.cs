@@ -25,6 +25,12 @@ namespace Nightlight.Services
                         if (baseAttribute is NightlightStringAttribute stringAttribute)
                         {
                             Console.WriteLine("String attribute found!");
+
+                            if (!property.GetType().Equals(typeof(string)))
+                            {
+                                throw new Exception("String attribute applied to Non-String Property");
+                            }
+
                             Console.WriteLine($"  Name of Property:  {property.Name}");
                             Console.WriteLine($"  Value of Property: {property.GetValue(obj, null)}");
 
@@ -37,6 +43,32 @@ namespace Nightlight.Services
                             stringAttribute.Value = property.GetValue(obj, null) as string;
 
                             attributes.Add(stringAttribute);
+                        }
+                        else if (baseAttribute is NightlightIntegerAttribute intAttribute)
+                        {
+                            Console.WriteLine("Integer attribute found!");
+
+                            Console.WriteLine(property.GetType());
+
+                            if (property.PropertyType != typeof(int) && property.PropertyType != typeof(int?))
+                            {
+                                throw new Exception("Integer attribute applied to Non-Integer Property");
+                            }
+
+                            Console.WriteLine($"  Name of Property:  {property.Name}");
+                            Console.WriteLine($"  Value of Property: {property.GetValue(obj, null)}");
+
+                            Console.WriteLine($"  Title Provided:    {intAttribute.Title}");
+                            Console.WriteLine($"  Minvalue:          {intAttribute.MinValue}");
+                            Console.WriteLine($"  MaxValue:          {intAttribute.MaxValue}");
+                            Console.WriteLine($"  MustBePositive:    {intAttribute.MustBePositive}");
+
+                            int? value = (int?) property.GetValue(obj, null);
+
+                            if (value != null)
+                                intAttribute.Value = (int) value; 
+
+                            attributes.Add(intAttribute);
                         }
                         else
                         {
@@ -71,6 +103,23 @@ namespace Nightlight.Services
                         node.MaxLength = nsa.MaxLength;
 
                     node.Value = nsa.Value ?? null;
+
+                    nodes.Add(node);
+                }
+                else if (attribute is NightlightIntegerAttribute nia)
+                {
+                    Console.WriteLine("Found NightlightIntegerAttribute");
+
+                    // TODO: Extract Mapping
+                    NightlightIntegerNode node = new NightlightIntegerNode(nia.Title)
+                    {
+                        Required = nia.Required
+                    };
+
+                    node.MinValue = nia.MinValue;
+                    node.MaxValue = nia.MaxValue;
+                    node.Value = nia.Value;
+                    node.MustBePositive = nia.MustBePositive;
 
                     nodes.Add(node);
                 }

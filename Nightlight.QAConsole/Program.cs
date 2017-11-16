@@ -14,7 +14,7 @@ namespace Nightlight.QAConsole
 
     class Program
     {
-        static void Main(string[] args)
+        private static void TestStringClasses()
         {
             StringClassForTestingValues stc = new StringClassForTestingValues
             {
@@ -25,6 +25,24 @@ namespace Nightlight.QAConsole
             NightlightConsoleForm<StringClassForTestingValues> consoleForm = new NightlightConsoleForm<StringClassForTestingValues>(controller);
 
             consoleForm.Run();
+        }
+
+        private static void TestIntegerClasses()
+        {
+            IntegerClassForTestingValues itc = new IntegerClassForTestingValues
+            {
+            };
+
+            NightlightFormController<IntegerClassForTestingValues> controller = new NightlightFormController<IntegerClassForTestingValues>(itc);
+
+            NightlightConsoleForm<IntegerClassForTestingValues> consoleForm = new NightlightConsoleForm<IntegerClassForTestingValues>(controller);
+
+            consoleForm.Run();
+        }
+
+        static void Main(string[] args)
+        {
+            TestIntegerClasses();
 
             Console.ReadKey(true);
 

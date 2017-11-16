@@ -7,9 +7,10 @@ namespace Nightlight.TestClasses
 {
     public class StringClassForTestingValues
     {
+
+
         [NightlightString(Title: "Required String With No Previous Value", Required = true)]
         public string RequiredStringWithNoPreviousValue { get; set; }
-
 
         private string _requiredStringWithPreviousValue_old = "Old Value";
 

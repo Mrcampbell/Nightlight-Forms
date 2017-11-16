@@ -16,13 +16,13 @@ namespace Nightlight.QAConsole
     {
         static void Main(string[] args)
         {
-            StringTestClass stc = new StringTestClass
+            StringClassForTestingValues stc = new StringClassForTestingValues
             {
             };
 
-            NightlightFormController<StringTestClass> controller = new NightlightFormController<StringTestClass>(stc);
+            NightlightFormController<StringClassForTestingValues> controller = new NightlightFormController<StringClassForTestingValues>(stc);
 
-            NightlightConsoleForm<StringTestClass> consoleForm = new NightlightConsoleForm<StringTestClass>(controller);
+            NightlightConsoleForm<StringClassForTestingValues> consoleForm = new NightlightConsoleForm<StringClassForTestingValues>(controller);
 
             consoleForm.Run();
 

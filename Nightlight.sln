@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightlight.QAConsole", "Nig
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightlight.Test", "Nightlight.Test\Nightlight.Test.csproj", "{C8B6B3B2-8DDB-4438-8D85-97E14F9CBF1D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightlight.Droid.QA", "Nightlight.Droid.QA\Nightlight.Droid.QA.csproj", "{27658277-1AC8-4DA6-AFA2-95D078D356DF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nightlight.Droid", "Nightlight.Droid\Nightlight.Droid.csproj", "{BE074376-654D-46C1-9ED8-214C2CAFAAD7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,16 @@ Global
 		{C8B6B3B2-8DDB-4438-8D85-97E14F9CBF1D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8B6B3B2-8DDB-4438-8D85-97E14F9CBF1D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8B6B3B2-8DDB-4438-8D85-97E14F9CBF1D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27658277-1AC8-4DA6-AFA2-95D078D356DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{27658277-1AC8-4DA6-AFA2-95D078D356DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{27658277-1AC8-4DA6-AFA2-95D078D356DF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{27658277-1AC8-4DA6-AFA2-95D078D356DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{27658277-1AC8-4DA6-AFA2-95D078D356DF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{27658277-1AC8-4DA6-AFA2-95D078D356DF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{BE074376-654D-46C1-9ED8-214C2CAFAAD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE074376-654D-46C1-9ED8-214C2CAFAAD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE074376-654D-46C1-9ED8-214C2CAFAAD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE074376-654D-46C1-9ED8-214C2CAFAAD7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

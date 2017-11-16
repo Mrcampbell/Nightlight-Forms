@@ -42,7 +42,7 @@ namespace Nightlight.QAConsole
 
         static void Main(string[] args)
         {
-            TestIntegerClasses();
+            TestStringClasses();
 
             Console.ReadKey(true);
 

@@ -26,7 +26,7 @@ namespace Nightlight.Services
                         {
                             Console.WriteLine("String attribute found!");
 
-                            if (!property.GetType().Equals(typeof(string)))
+                            if (!property.PropertyType.Equals(typeof(string)))
                             {
                                 throw new Exception("String attribute applied to Non-String Property");
                             }

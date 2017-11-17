@@ -10,9 +10,12 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 
-namespace Nightlight.Droid.Services
+namespace Nightlight.Droid
 {
-    public class NightlightCellBuilder
+    public static class Constants
     {
+        public static int TITLE_TEXT_VIEW_ID = 1;
+        public static int WARNING_TEXT_VIEW_ID = 2;
+        public static int TEXT_FIELD_EDIT_TEXT_ID = 3;
     }
 }

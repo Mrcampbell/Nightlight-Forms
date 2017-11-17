@@ -86,6 +86,10 @@
     <Folder Include="Resources\mipmap-xxxhdpi\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Nightlight.Droid\Nightlight.Droid.csproj">
+      <Project>{BE074376-654D-46C1-9ED8-214C2CAFAAD7}</Project>
+      <Name>Nightlight.Droid</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Nightlight.Library\Nightlight.csproj">
       <Project>{77131487-9b5b-4a8c-8a37-6c824ad51bb2}</Project>
       <Name>Nightlight</Name>

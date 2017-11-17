@@ -12,8 +12,5 @@ namespace Nightlight.TestClasses
 
         [NightlightInteger("Required Integer", Required = true)]
         public int RequiredInteger { get; set; }
-
-        //[NightlightInteger("String Attribute Applied Erroneously to Integer")]
-        //public int? IntegerNotAString { get; set; }
     }
 }

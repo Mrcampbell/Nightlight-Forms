@@ -41,6 +41,7 @@ namespace Nightlight.Services
                             Console.WriteLine($"  Required:          {stringAttribute.Required}");
 
                             stringAttribute.Value = property.GetValue(obj, null) as string;
+                            stringAttribute.PropertyName = property.Name;
 
                             attributes.Add(stringAttribute);
                         }
@@ -66,7 +67,9 @@ namespace Nightlight.Services
                             int? value = (int?) property.GetValue(obj, null);
 
                             if (value != null)
-                                intAttribute.Value = (int) value; 
+                                intAttribute.Value = (int) value;
+
+                            intAttribute.PropertyName = property.Name;
 
                             attributes.Add(intAttribute);
                         }
@@ -104,6 +107,8 @@ namespace Nightlight.Services
 
                     node.Value = nsa.Value ?? null;
 
+                    node.PropertyName = nsa.PropertyName;
+
                     nodes.Add(node);
                 }
                 else if (attribute is NightlightIntegerAttribute nia)
@@ -121,6 +126,7 @@ namespace Nightlight.Services
                     node.Value = nia.Value;
                     node.MustBePositive = nia.MustBePositive;
 
+                    node.PropertyName = nia.PropertyName;
                     nodes.Add(node);
                 }
             }

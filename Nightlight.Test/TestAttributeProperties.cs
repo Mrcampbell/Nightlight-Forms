@@ -23,7 +23,7 @@ namespace Nightlight.Test
             StringAttributeObjectWithMinLengthLessThanZero obj = new StringAttributeObjectWithMinLengthLessThanZero();
 
             NightlightFormController<StringAttributeObjectWithMinLengthLessThanZero> formcontroller =
-                new NightlightFormController<StringAttributeObjectWithMinLengthLessThanZero>(obj);
+                new NightlightFormController<StringAttributeObjectWithMinLengthLessThanZero>(ref obj);
         }
     }
 }

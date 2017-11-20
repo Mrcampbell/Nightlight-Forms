@@ -20,7 +20,7 @@ namespace Nightlight.QAConsole
             {
             };
 
-            NightlightFormController<StringClassForTestingValues> controller = new NightlightFormController<StringClassForTestingValues>(stc);
+            NightlightFormController<StringClassForTestingValues> controller = new NightlightFormController<StringClassForTestingValues>(ref stc);
 
             NightlightConsoleForm<StringClassForTestingValues> consoleForm = new NightlightConsoleForm<StringClassForTestingValues>(controller);
 
@@ -33,7 +33,7 @@ namespace Nightlight.QAConsole
             {
             };
 
-            NightlightFormController<IntegerClassForTestingValues> controller = new NightlightFormController<IntegerClassForTestingValues>(itc);
+            NightlightFormController<IntegerClassForTestingValues> controller = new NightlightFormController<IntegerClassForTestingValues>(ref itc);
 
             NightlightConsoleForm<IntegerClassForTestingValues> consoleForm = new NightlightConsoleForm<IntegerClassForTestingValues>(controller);
 

@@ -7,12 +7,14 @@ namespace Nightlight.Models.Nodes
     public abstract class NightlightBaseNode : INightlightNode
     {
         private string _title;
+        private string _propertyName;
 
         public NightlightBaseNode(string Title)
         {
             _title = Title;
         }
 
+        public string PropertyName { get; set; }
         public string Title { get => _title; }
         public abstract bool IsValid();
         public abstract string GetErrorMessage();

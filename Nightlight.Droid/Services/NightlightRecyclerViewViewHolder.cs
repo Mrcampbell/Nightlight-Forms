@@ -13,6 +13,7 @@ using Android.Support.V7.Widget;
 using Nightlight.Droid.Models;
 using Android.Text;
 using Android.Util;
+using Nightlight.Models.Nodes;
 
 namespace Nightlight.Droid.Services
 {
@@ -21,6 +22,7 @@ namespace Nightlight.Droid.Services
         public LinearLayout LinearLayout { get; private set; }
 
         private NightLightCell cell;
+        public INightlightNode Node;
 
         public TextView Title { get; private set; }
         public TextView Warning { get; private set; }
@@ -28,6 +30,7 @@ namespace Nightlight.Droid.Services
 
         public Func<bool> IsValid { get; set; }
         public Func<string> GetErrorMessage { get; set; }
+
 
         public NightlightRecyclerViewViewHolder(View itemView) : base(itemView)
         {

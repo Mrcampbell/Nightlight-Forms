@@ -14,6 +14,8 @@ namespace Nightlight.Attributes
             _title = Title;
         }
 
+        public string PropertyName { get; set; }
+
         public string Title { get { return _title; } }
     }
 }

@@ -22,7 +22,7 @@ namespace Nightlight.Droid.Services
         private NightlightFormController<StringClassForTestingValues> _formController;
         private List<INightlightNode> _nodes;
 
-        public NightlightRecyclerViewAdapter(NightlightFormController<StringClassForTestingValues> formController)
+        public NightlightRecyclerViewAdapter(ref NightlightFormController<StringClassForTestingValues> formController)
         {
             _formController = formController;
             _nodes = formController.Nodes.ToList();
@@ -35,10 +35,12 @@ namespace Nightlight.Droid.Services
 
             var node = _nodes[position] as NightlightStringNode;
 
+            //nightlightViewHolder.Node = node;
             nightlightViewHolder.Title.Text = node.Title;
             nightlightViewHolder.TextField.Text = node.Value;
             nightlightViewHolder.IsValid = () => { node.Value = nightlightViewHolder.TextField.Text; return node.IsValid(); };
             nightlightViewHolder.GetErrorMessage = () => node.GetErrorMessage();
+
         }
 
         private NightLightCell CreateCell()
